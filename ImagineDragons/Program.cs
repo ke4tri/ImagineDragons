@@ -18,15 +18,17 @@ namespace ImagineDragons
             var songArtist = song.Artist;
             var songName = song.Name;
 
+           
             
             Console.WriteLine($"This is what you chose {songArtist}, and {songName}");
             song.SaveToDictionary(songArtist, songName);
+            
             Console.ReadLine();
         }
 
         public class Song
         {
-            // not sure this does anything to make it "required"
+           
             public string Artist { get; set; }
             public string Name { get; set; }
 
@@ -42,6 +44,7 @@ namespace ImagineDragons
             IDictionary<string, string> goodSongs = new Dictionary<string, string>();
             IDictionary<string, string> allSongs = new Dictionary<string, string>();
 
+            
             public void SaveToDictionary(string name, string song)
             {
                 goodSongs.Add(name, song);
