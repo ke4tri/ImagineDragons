@@ -8,27 +8,15 @@ namespace ImagineDragons
         static void Main(string[] args)
         {
 
+            Console.WriteLine("What is a name: ");
+            var nameChose = Console.ReadLine();
             
-            
+            var song = new Song(nameChose, "smith");
+            var song2 = song.Artist;
 
-
-            Console.WriteLine("Hello World!");
-            Console.ReadLine();
-            Console.WriteLine("We are going to add some songs");
-            Console.WriteLine("Name an artist : ");
-            Console.ReadLine();
-            var userArtistInput = Console.ReadLine();
-            Console.WriteLine("Name a song : ");
-           
-            var userNameInput = Console.ReadLine();
-            var song = new Song(userArtistInput, userNameInput);
-
-
-            Console.WriteLine($"This is what you chose {song}");
+            Console.WriteLine($"This is what you chose {song2}");
 
             Console.ReadLine();
-
-
         }
 
         public class Song
@@ -37,7 +25,6 @@ namespace ImagineDragons
             public string Artist { get; set; }
             public string Name { get; set; }
 
-            
             // Constructor
             public Song(string artist, string name)
             {
@@ -46,9 +33,20 @@ namespace ImagineDragons
             }
 
             List<string> goodSongs = new List<string>();
+            List<string> allSongs = new List<string>();
         }
     }
 }
+            
+
+
+
+
+            
+            
+            
+
+
 
 
             
